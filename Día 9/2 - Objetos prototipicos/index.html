@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Objetos Prototípicos</title>
+</head>
+<body>
+    <script>
+        function Libro(autor, titulo, cantPaginas){
+            this.autor= autor;
+            this.titulo= titulo;
+            this.cantPaginas= cantPaginas;
+        }
+
+        let libro1= new Libro("Stephen king", "Carrie", 524); //en este caso "libro1" en un objeto tipo Instancia.
+        //si por ejemplo queremos ver la propiedad de Object "valueOf()" no la encontraríamos en el objeto "libro1" ni en el objeto "Libro", sino más arriba en la cadena en el objeto "Object"
+        //algunos métodos no son heredables del objeto "Object". Los métodos que en su denominación se leen como "Object.prototype.nombreDelMetodo()" son los que son heredables por los objetos que vayan en cadena desde el primer objeto creado.
+        //los "constructores" del objeto original son heredables por las cadenas de objetos que parten de dicho objeto original(cadenas de prototipos). 
+        //el constructor de los objetos funciona tanto como una función como una propiedad
+    </script>
+</body>
+</html>

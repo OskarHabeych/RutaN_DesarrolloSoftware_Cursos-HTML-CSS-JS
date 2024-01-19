@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Asynk/Await</title>
+</head>
+<body>
+    <script>
+        //Esta es otra estrategia para escribir código asíncrono y que en su forma de realizarlo parezca sincrono, es mucho más sencillo y menos enredado que las formas anteriores
+        async function obtenerDatos(){ //"async" es una palabra clave para declarar una función asíncrona
+            //return fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico')
+            let respuesta= await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico') //"await" es una palabra clave que se usa para esperar la respueta de una operación asíncrona antes de continuar con la ejecución del código 
+            /*.then(function(respuesta){                                                       //cuando se usa "await" dentro de una función asíncrona la ejecución se detiene hasta que la operación asíncrona se haya completado y su resultado este disponible
+                return respuesta.json();
+            })
+            .then(function(datos){
+                console.log(datos);      //Toda esta parte del código justificada en verde sería la forma convencional de capturar un archvio .json de una API de en un servidor remoto por medio del método "fetch" y mostarlo a la intefaz del usuario
+            })                           // Acá estamos haciendo asincronicidad con async-await para usar el método fetch de captura de datos (.json) en un servidor remoto para mostrarlo al usuario
+            .catch(function(error){
+                console.error(error)
+            });*/
+            let datos= await respuesta.json();
+            console.log(datos);
+        }
+
+        obtenerDatos();
+        console.log("El código sigue")
+    </script>
+</body>
+</html>

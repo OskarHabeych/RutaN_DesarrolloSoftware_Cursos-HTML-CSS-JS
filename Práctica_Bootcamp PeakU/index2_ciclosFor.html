@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Prácticas bootcamp Ciclos FOR</title>
+</head>
+<body>
+    <script>
+        function conditionals(ageOfStudents) {
+	// add code here
+	ageOfStudents = [19, 21, 16, 18, 24, 17, 19, 19, 20, 21, 25, 23, 17, 19, 22, 23, 18, 18, 29];
+	let cont = 0;
+	let cont2 = 0;
+
+	for (let age of ageOfStudents) {
+		if (age < 18) {
+			cont++;
+			console.log("Underaged: " + cont);	
+		}
+		else {
+			cont2++;
+			console.log("Adults: " + cont2);
+		}		
+	}
+	return ("Underaged: " +cont +", kuku: "+cont2);
+}
+    </script>
+</body>
+
+
+

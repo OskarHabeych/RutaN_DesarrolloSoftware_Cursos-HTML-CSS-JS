@@ -1,0 +1,32 @@
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(175, 52, 151); font-size: 50px;
+}
+
+p{
+    font-weight: bold;
+}
+
+input{
+    border-style: groove; background-color: rgb(212, 240, 243); width: 4%; margin: 5px;
+}
+
+button{
+    margin-left: 8px; background-color: rgb(227, 233, 239);
+}
+
+#editarBoton{
+    margin-left: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: aqua; font-weight: bold;
+}
+
+#editarFunciones{
+     margin: 20px; padding: 2px; 
+}
+
+h3{
+    margin-left: 6px;
+}
+

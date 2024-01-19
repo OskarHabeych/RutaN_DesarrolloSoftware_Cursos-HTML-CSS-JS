@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>JSON- Extraer información con XMLHttpRequest()</title>
+</head>
+<body>
+    <div id="nombre"></div>
+    <script>
+        let datosJSON;
+        let xhr= new XMLHttpRequest();
+        xhr.open('GET', "persona.json", true);// "...open(...........async: true)"" ->  esto nos denota que al colocarle true a una "respuesta asíncrona", la página irá haciendo las próximas tareas que necesite mientras la solicitud se trabaja en segundo plano, mejorando la experiencia del usuario.
+        xhr.responseType= 'json'; //estamos esperando un tipo de respuesta de tipo json le decimos al código. 
+        xhr.onload= function(){ //"onload" es un evento que se desencadena cuando la solicitud "httpRequest" ha sido completada exitosamente.
+                                 // se le asigna a "onload" una función que se ejecutará automáticamente cada vez que se complete la solicitud y se reciba una respuesta satisfactoria del servidor..
+            if(xhr.status === 200){
+                datosJSON= xhr.response;
+                let elementoTexto= document.getElementById("nombre");
+                elementoTexto.textContent= datosJSON.nombre;
+            }else{
+                //manejar el error
+            }
+        }
+            xhr.send();
+    </script>
+</body>
+</html>

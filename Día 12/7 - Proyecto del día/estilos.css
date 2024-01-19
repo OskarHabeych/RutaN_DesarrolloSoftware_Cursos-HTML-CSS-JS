@@ -1,0 +1,43 @@
+body{
+    background-color: bisque;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.693);
+    
+}
+
+select{
+    margin: 7px;
+    margin-top: 1.8%;
+    width: 160px;
+    background-color: rgb(214, 233, 218);
+    border-radius: 2%;
+}
+
+#buscarPelicula{
+    height: 33px;
+    width: 200px;
+    margin: 7px;
+    background-color: rgb(227, 239, 230);
+}
+
+#miBoton{
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#miBoton:hover {
+    background-color: #45a049;
+  }
+
+#miBoton:active {
+    background-color: #3e8e41;
+  }
+

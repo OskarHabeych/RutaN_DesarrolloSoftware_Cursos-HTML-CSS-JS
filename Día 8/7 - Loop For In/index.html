@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Parámetros de Constructor</title>
+</head>
+<body>
+    <script>
+        function Perro(raza, edad, color){
+            this.patas= 4;
+            this.raza= raza;
+            this.edad= edad;
+            this.color= color;
+            this.ladrar= function(){
+                console.log("Guauuu");    
+            };
+        };
+        //Instancias del mismo objeto "Perro"
+        let jou= new Perro("Pastor alemán", 7, "Negro con cafe");
+        let simon= new Perro("Criollo", 2, "negro");
+        let salsa= new Perro("Vasser hunt", 13, "Blanco con marron");   
+        
+        function Empleado(nombre, apellido, edad, cargo){
+            this.nombre= nombre;
+            this.apellido= apellido;
+            this.edad= edad;
+            this.cargo= cargo;
+            this.presentarse= function(){
+                console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo} y tengo ${this.edad} años de edad`);
+            };
+        };
+
+        for(let caracteristica in salsa){
+            console.log(caracteristica + ": " + salsa[caracteristica]);
+            console.log(caracteristica);
+            //console.log(caracteristica + ": " + jou[caracteristica]);
+        }
+    </script>
+</body>
+</html>

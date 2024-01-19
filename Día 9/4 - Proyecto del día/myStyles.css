@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(202, 242, 134);
+}
+
+h1{
+    font-size: 3em;
+    font-weight: bold; 
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px #ff0000;
+    margin-bottom: 0.7em;
+}
+
+div{
+    text-align: left;
+}
+
+input{
+    width: 150px;
+    text-align: justify;
+    background-color: #b0e7cd;
+}
+
+ul{
+    list-style-type: none; /*Elimina los puntos de la lista*/
+    margin: 0; /*elmina los márgenes*/
+    padding: 0; /*elimina los espacios internos*/
+}
+
+li{
+    background-color: aqua;
+    padding: 10px; /*espacio interno*/
+    border-bottom: 2px solid #ccc; /*borde inferior*/
+    text-align: center; /*alineación del texto*/
+}

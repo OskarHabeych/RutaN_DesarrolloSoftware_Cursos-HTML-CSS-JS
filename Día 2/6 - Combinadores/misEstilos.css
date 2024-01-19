@@ -1,0 +1,32 @@
+div p {
+    color:blue;
+}
+
+ol > li{
+    font-weight:bolder;
+}
+
+h2 + h3{
+    background-color: rgb(32, 178, 170);
+}
+
+h2 ~ h3{
+    background-color: rgb(207, 151, 19);
+}
+
+p[align= "left"]{
+    background-color: rgb(28, 185, 185);
+}
+
+p{
+    background-color: rgb(197, 230, 66);
+}
+
+div p[align= "left"]{
+    background-color: rgb(192, 14, 199);
+}
+
+div p[align= "left"]:hover{
+    background-color: rgba(9, 158, 83, 0.488);
+}
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Asynk/Await</title>
+</head>
+<body>
+    <script>
+      //Ejemplo haciendo varias peticiones a diferentes APIs  
+        
+      async function obtenerTodo(){
+        console.log("Este código está al comienzo");
+        let respuestaGasolina= await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico'); //dirección del API del servidor remoto en donde se hace la solicitud para luego convertir la información que se obtenga como respuesta en un archivo .json
+        let datosGasolina= await respuestaGasolina.json(); //transformación a archivo .json de la respuesta de la API remota
+
+        console.log("Este código está al medio");
+        let respuestaDolar= await fetch('https://open.er-api.com/v6/latest/USD'); //solicitud a una segunda API de otro servidor remoto para extraer la información transformandolo a archivo .json, tal como en el caso anterior
+        let datosDolar= await respuestaDolar.json();
+
+        console.log(datosGasolina, datosDolar);
+        console.log("Este código está al final");
+      }
+
+      obtenerTodo();
+
+    </script>
+</body>
+</html>

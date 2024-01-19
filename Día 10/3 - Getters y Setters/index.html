@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Subclases</title>
+</head>
+<body>
+    <script>
+        class Deportista{
+            constructor(nombre, apellido){
+                this.nombre= nombre;
+                this.apellido= apellido;
+            }
+        }
+
+        class Futbolista extends Deportista{
+            constructor(nombre, apellido, goles){
+                super(nombre, apellido);
+                this._goles= goles; //el "guión bajo" en una propiedad después del "this" denota que dicha propiedad es una propiedad privada
+            }
+            get goles(){
+                return this._goles;
+            }
+
+            set goles(nuevosGoles){
+                this._goles= nuevosGoles;
+
+            }
+        }
+    </script>
+</body>
+</html>

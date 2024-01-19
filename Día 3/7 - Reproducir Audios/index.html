@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Temporizador</title>
+    <style>
+        audio::-webkit-media-controls-panel{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="tiempoElegido">
+   <button onclick="comenzarTiempo()">Alarma</button> 
+   <h1 id="textoAlarma" style="color:darkorange">APAGADO</h1>
+   
+   <audio controls id="audioAlarma">
+        <source src="Audios/alarma.mp3" type="audio/mpeg">
+        Sonido no habilitado
+    </audio>
+
+    <img id="imagenAlarma" src="Foto/Tema_FotoBitacora51.jpg"
+        width="40%" 
+        alt="Yo escalando"
+        align="left">
+
+   <script>
+    let elementoSegundos= document.getElementById("tiempoElegido");
+    let elementoTextoAlarma= document.getElementById("textoAlarma");
+    let elementoSonidoAlarma= document.getElementById("audioAlarma");
+    let imagen= document.createElement("img");
+    let elementoImagenAlarma=document.getElementById("imagenAlarma");
+
+    function comenzarTiempo(){
+        setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
+    }
+
+    function tiempoCumplido(){
+    elementoTextoAlarma.textContent = "ENCENDIDO";
+    elementoTextoAlarma.style.color = "green";
+    elementoSonidoAlarma.play();
+    elementoImagenAlarma.appendChild(imagen);
+    }   
+   </script>
+</body>
+</html>
+

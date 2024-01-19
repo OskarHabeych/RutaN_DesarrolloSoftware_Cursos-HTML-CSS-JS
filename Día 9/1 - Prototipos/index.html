@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Prototipos</title>
+</head>
+<body>
+    <script>
+        let perro= {nombre: 'Salsa', raza: 'Vasserhunt'}; //objeto que sí es un prototipo y tiene sus parámetros.
+        let perro1= Object.create(perro); //objeto que no es un prototipo pero toma información del objeto anterior que sí es un prototipo.
+        //cada "objeto prototipo" tiene un compedio de propiedades donde otros objetos pueden heredarlas.
+        //cabe señalar que el "objeto prototipo" ha recibido las propiedades de un prototipo que es un "objeto".
+        //a través de la cadena de prototipos que se van conectando entre los objetos es que éstos heredan propiedades y métodos 
+        
+        function prototipos(){
+            let perro2= Object.create(perro); 
+            console.log(perro2._proto_);
+        }
+    </script>
+</body>
+</html>

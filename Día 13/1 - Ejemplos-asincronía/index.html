@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Sincronía y Asincronía</title>
+</head>
+<body>
+    <script>
+        //Sincronía: se espera a que cada porción de código se ejecute y realice su acción correspondiente para seguir con la ejecución de la siguente porción de código y así
+        
+        //ACCIÓN 1
+        console.log("Inicio del código sincrónico");
+
+        //ACCIÓN 2
+        for(let i= 0; i < 10; i++){
+            console.log(i);
+        }
+
+        //ACCIÓN 3
+        console.log("fín del código síncrono");
+
+
+        //Asincronía: Se espera que luego de mandar todo una cascada de código hacia el usuario o servidor, las partes de código que su accionar demoren menos vayan ejecutándose primero no importando el orden de llegada
+
+        //ACCIÓN 4
+        console.log("Inicio del código sincrónico");
+
+        //ACCIÓN 5
+        setTimeout(function(){
+            for(let i=0; i < 10; i++){
+                console.log(i);
+            }
+        }, 0); //aquí el cero representa el tiempo en milisegundos en que se ejecutará la acción que representa este loop "for"
+
+        //ACCIÓN 6
+        console.log("fín del código síncrono");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+div{
+    background-color: aqua;
+}
+
+h2 ~ h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p:hover{
+    font-size: x-large; color:chocolate;
+}
+
+.imagen{
+    color: firebrick; mask-image: url("Fotos/Recorte imagen elipse procesos de la Empresa.png");
+}
+
+#contenido{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; color: blue; 
+}
+
+.numerales{
+    font-size: larger;
+}

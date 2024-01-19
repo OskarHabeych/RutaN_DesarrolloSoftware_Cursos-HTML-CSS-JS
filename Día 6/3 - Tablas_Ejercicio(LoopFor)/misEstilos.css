@@ -1,0 +1,37 @@
+h1{
+    font-size: 3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    text-shadow: 2px 2px 5px blueviolet;
+}
+
+p{
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(84, 165, 84);
+}
+
+input{
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 8px;
+}
+
+button{
+    margin: 4px;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: -apple system,system-ui,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 2px 16px;
+    position: relative;
+    text-align: center;
+}
+

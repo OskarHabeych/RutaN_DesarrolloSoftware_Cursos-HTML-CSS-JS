@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>JSON- Como extraer información con la función FETCH</title>
+</head>
+<body>
+    <div id="nombre"></div>
+    
+    <script>
+        let datosJson;
+
+        fetch('persona.json') 
+                              
+        .then(res => res.json()) 
+                                 
+        .then((salida) =>{    
+            datosJson= salida; 
+          
+        let elementoTexto= document.getElementById('hombre'); //--> se cambio el id "nombre" por un id erroneo.
+        elementoTexto.textContent= datosJson.nombre;
+        })
+        .catch(function(error) {alert(error)})
+    </script>
+    </script>
+</body>
+</html>

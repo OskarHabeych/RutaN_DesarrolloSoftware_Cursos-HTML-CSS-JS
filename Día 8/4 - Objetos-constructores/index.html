@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Uso del Constructor en Obejtos</title>
+</head>
+<body>
+    <script>
+        function Perro(){
+            this.patas= 4;
+            this.raza= "halls Terrier"
+            this.ladrar= function(){
+                console.log("Guauuu");    
+            };
+        }
+        //Instancias del mismo objeto "Perro"
+        let jou= new Perro();
+        let simon= new Perro();
+        let Salsa= new Perro();
+    </script>
+</body>
+</html>

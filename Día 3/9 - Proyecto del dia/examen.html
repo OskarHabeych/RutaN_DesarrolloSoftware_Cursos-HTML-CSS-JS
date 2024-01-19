@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Juego de preguntas</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarTiempoRegresivo()">
+    <br>
+    <h1 style=" color: chocolate;">JUEGO DE PREGUNTAS</h1><br>
+    <h2><span id="textoCuentaRegresiva">Responde antes de que se cumpla el tiempo</span></h2><br><br>
+   
+    <audio controls id="sonidoAlarma">
+        <source src="Audio/alarma.mp3" type="audio/mpeg">
+    </audio>
+    <br>
+    <br>
+    <p> 1. ¿Cuál es tu orientación sexual?</p>
+        <input id="preguntaUno"><br><br>   
+    
+    <p> 2. En resumidas palabras, ¿cuándo y cómo fue tu primera vez?</p>
+        <input id="preguntaDos"><br><br>
+    
+    <p> 3. ¿Por cuál prototipo físico te inclinas más de esa pareja que desearías tener a tu lado?</p>
+        <input id=" preguntaTres"><br><br>
+    
+    <p> 4.  ¿Cuáles serían los valores más recalcados que te gustaría tuviera esa pareja que anhelas?</p>
+        <input id="preguntaCuatro"></p><br>
+    
+    <p> 5. ¿Cuál o cuáles son esas formas de interacción por las que mayormente te inclinas en el momento de tener el acto sexual?</p>
+        <input id="PreguntaCinco"></p><br>
+
+        <button onclick="finalizar();" style="color: rgb(11, 53, 22); background-color: rgb(204, 240, 169);">Salvar!</button>
+        <button onclick="recargarPagina();" style="color: rgb(31, 29, 22); background-color: rgba(183, 189, 213, 0.997);">Volver a intentar</button>    
+
+    <script>
+        let elementoSegundos= document.getElementById("textoCuentaRegresiva");
+        let elementoSonidoAlarma= document.getElementById("sonidoAlarma");
+        let carlosPerez= document.getElementById("preguntaUno").value;
+        let andresMejia= document.getElementById("preguntaDos").value;
+        let miguelPedroza= document.getElementById("preguntaTres").value;
+        let christianPaez= document.getElementById("preguntaCuatro").value;
+        let oscarPino= document.getElementById("PreguntaCinco").value; 
+
+        let tiempoAcabado;
+        let intervaloDeTiempo;
+        
+        function comenzarTiempoRegresivo(){
+            tiempoAcabado= setTimeout(tiempoTerminado, 30000);
+            intervaloDeTiempo= setInterval(cronometro, 1000);
+            elementoSegundos.textContent= 30;
+        }
+        
+        function cronometro(){
+            let tiempo= elementoSegundos.textContent;
+            tiempo= tiempo - 1;
+        }
+
+        function tiempoTerminado(){
+            clearInterval(intervaloDeTiempo);
+            elementoSegundos.textContent= 0;
+            elementoSegundos.style.color= "red"; 
+            elementoSonidoAlarma.play();
+            alert("GAME OVER: Intenta nuevamente!!");
+            }
+
+        function finalizar() {
+        clearTimeout(tiempoAcabado);  
+        clearInterval(intervaloDeTiempo);                           
+        const event= new Date();
+        let fechaActual= event.toLocaleString('en-GB');
+        alert("fechaActual" + ":" + "  RESPUESTAS: " + "1. " + carlosPerez + "\n" + "2. " + andresMejia + "\n" + "3. " + miguelPedroza + "\n" + "4. " + christianPaez + "\n" + "5. " + oscarPino);
+        }
+
+        function recargarPagina(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>

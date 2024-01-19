@@ -1,0 +1,28 @@
+<!DOCTYPE html>>
+<head>
+    <title>Parámetros</title>
+</head>
+<body>
+    <p>Primer número</p>
+    <input type="number" id="primerNumero">
+    <p>Segundo número</p>
+    <input type="number" id="segundoNumero"><br>
+    <br><button onclick="mostrarResultado()">Calcular</button>
+    <h2 id="textoResultado"></h2>
+    <script>
+        function sumar(numero1, numero2){
+            resultado= +numero1 + +numero2; //para poder realizar la operación matemática (suma de números) se debe anteponer el signo "+" a cada dígito a sumar ó sino lo que se va a realizar es una concatenación de todos los dígitos a sumar.
+            return resultado;
+        }
+
+        function mostrarResultado(){
+            let elementoNumero1= document.getElementById("primerNumero");
+            let elementoNumero2= document.getElementById("segundoNumero");
+            let elementoTexto= document.getElementById("textoResultado");
+            let elementoSuma= sumar(elementoNumero1.value, elementoNumero2.value);
+
+            elementoTexto.textContent= elementoSuma;
+        }
+    </script>
+</body>
+</html>

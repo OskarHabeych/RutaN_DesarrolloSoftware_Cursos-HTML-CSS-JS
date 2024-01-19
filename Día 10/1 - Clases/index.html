@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Clases en JS</title>
+</head>
+<body>
+    <script>
+        class Papel{
+            constructor(alto, ancho){
+                this.alto= alto;
+                this.ancho= ancho;
+            }
+        }
+
+        let PapelA= class{ //este tipo de clases se les llama anónima porque no tiene un nombre luego del class
+            constructor(alto, ancho){
+               this.alto= alto;
+               this.ancho= ancho; 
+            }
+        }
+
+        let PapelB= class papelX{ //este tipo de clase es "nombrada" y no es anónima.
+            constructor(alto, ancho){
+               this.alto= alto;
+               this.ancho= ancho; 
+            }
+        }
+        //todas las "clases" obligatoriamente deben tener un contructor. Si tiene más de un constructor nos arrojaría un error, y si no posee un constructor visible el sistema asignará un contructor vacío por defecto.
+        //El "constructor" es un método de las clases o método especial que sirve para crear e inicializar un objeto que es creado a partir de "clase". Ésto permite que el constuctor realice cualquier iniciación personalizada que se necesite y tiene qeu ser antes a que cualquier otro método sea llamado en un objeto instanciado.
+    </script>
+</body>
+</html>

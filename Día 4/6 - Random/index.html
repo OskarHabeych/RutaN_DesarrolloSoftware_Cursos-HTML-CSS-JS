@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>función Random</title>
+</head>
+<body>
+    <br>
+    <button onclick="crearAleatorio()">Dame un Aleatorio</button>
+    <h2>Número aleatorio: <span id="textoAleatorio">---</span></h2><br>
+
+    <button onclick="crearAleatorio1()">Dame un Aleatorio</button>
+    <h2>Número aleatorio: <span id="textoAleatorio1">---</span></h2><br>
+
+    <button onclick="crearAleatorio2(100)">Dame un Aleatorio</button>
+    <h2>Número aleatorio: <span id="textoAleatorio2">---</span></h2>
+    <h3>Veces: <span id="veces">---</span></h3>
+
+    <button onclick="crearAleatorio3(10,15)">Dame un Aleatorio</button>
+    <h2>Número aleatorio: <span id="textoAleatorio3">---</span></h2>
+
+    <script>
+        let elementoAleatorio= document.getElementById("textoAleatorio");
+        
+        function crearAleatorio(){
+            elementoAleatorio.textContent = Math.random();
+        }
+
+        let elementoAleatorio1= document.getElementById("textoAleatorio1");
+
+        function crearAleatorio1(){
+            elementoAleatorio1.textContent = Math.floor(Math.random() * 11);
+        }
+
+        let elementoAleatorio2= document.getElementById("textoAleatorio2");
+        let numeroVeces= document.getElementById("veces");
+
+        function crearAleatorio2(maximo){
+            maximo= maximo + 1;
+            elementoAleatorio2.textContent = Math.floor(Math.random() * maximo);
+            numeroVeces.textContent= maximo + 1;
+        }
+
+        let elementoAleatorio3= document.getElementById("textoAleatorio3");
+
+        function crearAleatorio3(minimo, maximo){
+            maximo= maximo + 1;
+            resultado= Math.floor(Math.random() * (maximo - minimo) + minimo);
+            elementoAleatorio3.textContent = resultado;
+        }
+    </script>
+</body>
+</html>>

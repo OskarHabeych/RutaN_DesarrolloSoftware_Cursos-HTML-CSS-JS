@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarRelog()"> <!--al momento de cargarse la página en el explorador este llamará a la función comenzarRelog() -->
+    <br>
+    <input type="number" id="tiempoElegido">
+   <button onclick="comenzarTiempo()">Alarma</button> 
+   <h1 id="textoAlarma">00:00:00</h1>
+   
+   <audio controls id="audioAlarma">
+        <source src="Audio/alarma.mp3" type="audio/mpeg">
+        Sonido no habilitado
+    </audio>
+
+    <img id="imagenAlarma" src="Foto/Tema_FotoBitacora51.jpg"
+        width="40%" 
+        alt="Yo escalando"
+        align="left">
+
+   <script>
+    let elementoSegundos= document.getElementById("tiempoElegido");
+    let elementoTextoAlarma= document.getElementById("textoAlarma");
+    let elementoSonidoAlarma= document.getElementById("audioAlarma");
+    let imagen= document.createElement("img");
+    let elementoImagenAlarma=document.getElementById("imagenAlarma");
+
+    function comenzarTiempo(){
+        setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
+    }
+
+    function tiempoCumplido(){
+    
+    elementoTextoAlarma.style.color = "green";
+    elementoSonidoAlarma.play();
+    elementoImagenAlarma.appendChild(imagen);
+    }   
+
+    function comenzarRelog(){
+        setInterval(ticTac, 1000);
+    }
+
+    function ticTac(){
+        let tiempoActual= new Date();
+        let hora= String(tiempoActual.getHours()).padStart(2, "0"); <!--La funcion "String" que se observa acá se usa en este caso para poner el método "padStart()" que consiste en anteponerle un cero a cada cifra de las horas, los minutos y los segundos cuando estos estan con un valor antes la decena.-->
+        let minutes= String(tiempoActual.getMinutes()).padStart(2,"0");
+        let seconds= String(tiempoActual.getSeconds()).padStart(2, "0");
+
+        let textoHora= hora + ":" + minutes + ":" + seconds;
+        elementoTextoAlarma.textContent = textoHora;
+    }
+   </script>
+</body>
+</html>

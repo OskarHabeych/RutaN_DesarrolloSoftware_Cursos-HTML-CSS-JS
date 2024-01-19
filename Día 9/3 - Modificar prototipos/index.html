@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Modificación de Prototipos</title>
+</head>
+<body>
+    <script>
+        function Libro(autor, titulo, cantPaginas){
+            this.autor= autor;
+            this.titulo= titulo;
+            this.cantPaginas= cantPaginas;
+        }
+
+        let libro1= new Libro("Stephen king", "Carrie", 524); 
+        
+        Libro.abrirLibro= function(){
+            alert(this.titulo + " ha sido abierto"); //este método "abrirLibro()" se ha realizado directamente sobre el objeto inicial (objeto prototipo) y no sobre sus instancias.
+        }
+        let libro2= new Libro("J.L Borges", "El Aleph", 300);//tanto el método "abrirLibro()" como otros paremetros nuevos que se le pongan al objeto prototipo "Libro" solo funcionaran para ese objeto prototipo "Libro" porque no se esta modificando la "propiedad prototipo" de dicho objeto inicial que es la que hace que la propiedades del objeto prototipo se puedan heredar por sus instancias.
+
+        Libro.prototype.abrirLibro= function(){
+            alert(this.titulo + " ha sido abierto"); //en este caso al crear el método "abrirLibro()" usando la palabra "prototype", de la siguiente fomra: "Libro.prototype.abrirLibro= function()" se esta modificando la "propiedad prototipo" del objeto inicial o llamado objeto prototipo, por tanto no solo se esta modificando este objeto inicial sino a toda la cadena de herencia que se ha actulizado dinámicamente, es decir a todos las istancias del objeto inicial que se hagan.
+        }
+
+        //una forma común y recomendable para la mayoría de las definiciones de objetos es declarar las propiedades dentro del consturctor del objeto inicial y sus métodos dentro de la "propiedad prototipo" (anteponiendo la palabra "prototype" al método que es esta declarando como se hizo anteriormente), esto en sí es útil para que el código sea más claro de leer.
+        //ver el siguiente ejemplo:
+        function unObjeto(a, b){
+            this.a= a;
+            this.b= b;
+        }
+        unObjeto.prototype.metodo1= function(){};
+        unObjeto.prototype.metodo2= function(){};
+    </script>
+</body>
+</html>

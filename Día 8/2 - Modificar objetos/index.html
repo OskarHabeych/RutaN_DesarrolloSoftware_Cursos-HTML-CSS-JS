@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Modificación de propiedades de los Objetos</title>
+</head>
+<body>
+    <script>
+        let perro= {
+            nombre: "Jou",
+            raza: "Pastor alemán",
+            edad: 8,
+            ladrar(){
+                console.log("guauuu");
+            },
+            saludar(){
+                console.log("guauu guauu me llamo " + perro.nombre);
+            }
+        };
+        
+        perro.edad= 7;
+
+        //perro1= new Perro(); --> De esta manera no se puede hacer una instancia del objeto "perro" ya que este es un objeto sin constructor.
+
+        function cumplirAnios(){
+            perro.edad= perro.edad + 1;
+        }
+
+        perro["color"]= 'negro con gris';
+    </script>
+</body>
+</html>

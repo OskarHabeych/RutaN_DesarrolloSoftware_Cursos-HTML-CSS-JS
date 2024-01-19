@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>JSON- Como extraer información con la función FETCH</title>
+</head>
+<body>
+    <div id="nombre"></div>
+    
+    <script>
+        let datosJson;
+
+        fetch('persona.json') //con la función "fetch" solo se debe colocar el archivo .json que queremos extraer, en este caso queremos extraer al archivo "persona.json".
+                              // en este caso se esta enviando una solicitud GET al archivo "persona.json", entonces esta función "fetch" devolverá una "promesa" que se resolverá cuando se tenga la respuesta del servidor.
+        .then(res => res.json()) //acá se esta llamando a una función llamada .then, esta función se ejecutará automáticamente una vez que la promesa que nos devuelve la función "fetch" se haya resuelto exitosamente.
+                                 //el valor de la promesa resuelta se almacena en la variable creada "res" que en esta función se recibe como parámetro  y devuelve con un "return interno" el resultado de parsear la respuersta del servidor a un objeto tipo .json
+        .then((salida) =>{    // esta nueva función tiene la respuesta a la "promesa" de la función fetch y que en este caso se esta almacenando en la variable "salida" que es el objeto .json ya parceado.
+            datosJson= salida; //acá se asigna ese valor de la variable "salida" en la variable "datosJson" quien fue creada al inicio
+          // --> de esta forma se obtiene el objeto .json ya parceado para ser utilizado en el siguiente bloque de código
+        
+        let elementoTexto= document.getElementById('nombre');
+        elementoTexto.textContent= datosJson.nombre;
+        })
+    </script>
+</body>
+</html>

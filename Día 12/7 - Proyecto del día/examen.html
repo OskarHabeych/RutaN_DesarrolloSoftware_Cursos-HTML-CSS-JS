@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>Selector de Películas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <br>
+    <br>
+    <img src="document-98478_1280.png" 
+    width="20%" 
+    alt="Yo farreando"
+    align="left"
+    hspace="20">
+   
+    <h1>Selector de Películas</h1> 
+   
+   <div class="sidebar-box">
+   <select id="listaAudiovisual">
+    <option>Selecciona item:</option>
+        <option value="peliculas.json">Películas</option>
+        <option value="series.json">Series</option>
+   </select>
+   </div>
+   <br>
+   <div>
+        <input type="text" id="buscarPelicula" placeholder="Ingrese película o serie..">
+        <button id="miBoton">Buscar</button>
+    </div>
+    <div>
+        <ul id="respuestaBusqueda">
+        </ul>
+    </div>
+    <script src="myScript.js"></script>
+</body>
+</html>

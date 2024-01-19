@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Loop For Of</title>
+</head>
+<body>
+   <script>
+    
+    let array1= ['a', 'b', 'c'];
+    let palabra= "Bienvenido"
+
+
+   function loopear(){
+       for(let letra of array1){ //variable elegida con el array sobre el cual se desea iterar..
+        console.log(letra);
+       }
+   }
+
+   function loopear2(){
+       for(let letra of palabra){ 
+        document.write("<br>" + "<br>" + letra + "<br>");
+       }
+    }
+
+   function loopear3(){
+       for(let letra in palabra){ 
+        document.write("<br>" + "<br>" + letra + "<br>");
+        document.write(letra);
+       }
+   }
+   </script> 
+</body>
+</html>

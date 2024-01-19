@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Promesas</title>
+</head>
+<body>
+    <script>
+       let promesa1= new Promise(function(resolve, reject){ //promesa que tarda 2 segundos en completarse
+            setTimeout(resolve, 2000, 'hola');
+       });
+
+       let promesa2= new Promise(function(resolve, reject){ //promesa que tarda 4 segundos en completarse
+            setTimeout(resolve, 4000, 'Mundo');
+       });
+       Promise.all([promesa1, promesa2]).then(function(valores){
+            console.log(valores);
+       });
+       console.log("el código sigue su camino")
+    </script>  
+</body>
+</html>

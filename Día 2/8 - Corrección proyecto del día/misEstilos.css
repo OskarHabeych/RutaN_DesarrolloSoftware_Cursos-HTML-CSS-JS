@@ -1,0 +1,54 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(Fotos/Tema_FotoBitacora15.jpg);
+    color: white;
+}
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.centrar-titulos{
+    text-align: center;
+}
+
+.fotoPrincipal{
+    border: 4px;
+    border-style: hidden;
+    border-color: beige;
+    padding: 10px;
+}
+
+.texto-negrita{
+    font-weight: bolder;
+}
+
+.menu1 a[href]{
+    color: rgb(8, 0, 243);
+    text-decoration: underline;
+
+}
+
+.menu a:hover{
+    color: deeppink;
+    text-decoration-line: underline;
+}
+
+#subtituloUno{
+    text-decoration: underline;
+    text-align:justify;
+
+}
+
+#subtituloUno::first-letter{
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+#contenido1{
+    color: rgba(56, 20, 51, 0.926);
+
+}

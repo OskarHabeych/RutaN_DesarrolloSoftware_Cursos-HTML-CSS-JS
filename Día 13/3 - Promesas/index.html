@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Promesas en asincronía</title>
+</head>
+<body>
+    <script>
+        /*Las PROMESAS ASÍNCRONAS tienen en resumen 3 estados:
+        - Pendiente: Es el estado inicial que significa que ni se ha resuelto ni se ha rechazado
+        - Cumplida: es cuando el estado de la promesa cambia a cumplida pasando un valor como resultado
+        - Fallida: es si la operación es fallida por lo tanto la promesa cambiará a fallida y lo que recibirá es la información de la razón de dicho error */
+        
+        let miPromesa= new Promise(function(resolve, reject){ //objeto que es una istancia de tipo "Promise" y que contiene una función
+            setTimeout(function(){
+                let error= false; //si a esta variable "error" le pasamos el estado verdadero, entonces la promesa no se cumpliría, por tanto el error sería verdadero (es decir, habría error)
+                if(error){
+                    reject('La promesa ha fallado');
+                }else {
+                    resolve('La promesa se ha cumplido');
+                }
+            })
+        })
+
+        miPromesa.then(function(resultado){ //cuando ya hay un resultado para la promesa se le pasa el método "then()" al objeto "tipo promesa" y allí dentro se pasa una función como argumento, en este caso, esta función recibe el resultado de la promesa y lo imprime en consola 
+            console.log(resultado); //esta función imprime en consola el resulato de la promesa
+        }).catch(function(error){ // se captura el error en la función tipo "catch"
+            console.log(error);
+        });
+        
+        </script>
+</body>
+</html>

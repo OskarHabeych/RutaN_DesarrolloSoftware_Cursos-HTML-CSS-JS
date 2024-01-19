@@ -1,0 +1,13 @@
+div{
+    font-size: large;
+}
+
+.calculo{
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(127, 226, 127);
+}
+
+.resultado{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(124, 13, 80);
+}

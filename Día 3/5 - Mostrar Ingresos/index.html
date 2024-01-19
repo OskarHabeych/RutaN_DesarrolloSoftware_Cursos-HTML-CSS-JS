@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Ingresos de Usuario</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+    <p id="negrilla">Ingrea Nombre:</p>
+    <input type="text" id="nombreDeUsuario">
+    <button onclick="mostrarNombre()">Ingresar</button>
+    <h1 id="salida">No sé tu Nombre</h1>
+
+    <input type="text" id="nombreDeUsuario2">
+    <button onclick="mostrarNombre2()">Ingresar</button>
+    <h1 id="salida2">No sé tu Nombre</h1>
+
+    <script>
+        function mostrarNombre(){
+            let chupoHuevo= document.getElementById("nombreDeUsuario");
+            let metoLenguaCulo= document.getElementById("salida");
+            metoLenguaCulo.textContent= "Tu te llamas " + chupoHuevo.value + ".";
+        }
+
+        function mostrarNombre2(){
+            let chupoHuevo= document.getElementById("nombreDeUsuario2");
+            let metoLenguaCulo= document.getElementById("salida2");
+            let mensaje=  "Tu te llamas " + chupoHuevo.value + ".";
+
+            metoLenguaCulo.textContent = mensaje;
+        }
+    </script>
+</body>
+
+</html>

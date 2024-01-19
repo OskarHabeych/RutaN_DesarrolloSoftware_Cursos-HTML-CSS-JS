@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Promesas</title>
+</head>
+<body>
+    <script>
+       function obtenerUsuarios(){ //función que hace una llamada a una API de una lista de usuarios almacenada en un servidor 
+            return new Promise(function(resolve, reject){ //la llamada a la lista de usuarios se hará obviamente por medio de una "promesa"
+                let xhr= new XMLHttpRequest();
+                xhr.open('GET', 'https://jsonplaceholder.typicode.com/users'); //el método "open" es usado para abrir una peticion HTTP y el segundo argumento que pide "open" es la dirección del servidor
+                xhr.onload= function(){ //asignamos una función al evento "onload"
+                    if(xhr.status === 200){
+                        resolve(JSON.parse(xhr.responseText)); //si resolvió la promesa entonces parseamos lo que se almacenó en la variable "xhr" (en este caso es un archivo .json en dicho servidor remoto) que se muestra por medio del método "responseText"
+                    }else{
+                        reject(xhr.statusText); //en este caso es si se rechaza la promesa
+                    }
+                }
+                xhr.send(); //al final no olvidar enviar la petición al servidor por medio del método "send()"
+            });
+        }
+        //llamamos a la promesa que se hizo en el método "obtenerUsuarios()" y a mostrar los datos obtenidos en consola
+        obtenerUsuarios()
+        .then(function(usuarios){
+            console.log(usuarios);
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+    </script>                   
+</body>
+</html>

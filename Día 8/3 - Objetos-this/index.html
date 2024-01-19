@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Uso de This en los Objetos</title>
+</head>
+<body>
+    <script>
+        let perro= {
+            nombre: "Jou",
+            raza: "Pastor alemán",
+            edad: 8,
+            ladrar(){
+                console.log("guauuu");
+            },
+            saludar(){
+                console.log("guauu guauu me llamo " + this.nombre);
+            }
+        };
+        
+        perro.edad= 7;
+
+        function cumplirAnios(){
+            perro.edad= perro.edad + 1;
+        }
+
+        let perro2= {
+            nombre: "Simon",
+            raza: "Gosque",
+            edad: 2,
+            ladrar(){
+                console.log("guauuu");
+            },
+            saludar(){
+                console.log("guauu guauu me llamo " + this.nombre);
+            }
+        };
+
+        perro["color"]= 'negro con gris';
+    </script>
+</body>
+</html>

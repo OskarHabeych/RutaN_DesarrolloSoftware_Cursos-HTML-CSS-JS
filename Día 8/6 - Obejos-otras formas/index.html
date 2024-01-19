@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Otras formas de crear Objetos</title>
+</head>
+<body>
+    <script>
+        let coche1= new Object(); //forma de crear un onjeto vacío sin parámetros ni métodos
+
+        coche1.marca= 'Chevrolet';
+        coche1['modelo']= 'Prisma';
+        coche1.encender= function(){
+            alert("coche encendido");
+        };
+
+        let perro1= new Object({nombre: 'Simba'});//crear objetos por medio de "Object" asignandole una propiedad con un valor
+
+        let coche2= Object.create(coche1);//Crear instancias sin necesidad de tener constructures, se utiliza generalemnte cuando solo se va a crear una sola instancia.
+
+        //let coche3= new coche1("Renault", "Symbol"); --> "coche3" no se puede instanciar de esta fomra a partir del objeto "coche1" porque este último objeto no tiene costructor.
+    </script>
+</body>
+</html>

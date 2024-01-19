@@ -1,0 +1,46 @@
+body{
+    background-color: ivory; 
+}
+
+#tituloPrincipal{
+    padding: 20px; font-size: x-large;
+}
+
+#calculos{
+        padding: 7px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        margin-top: 10px;
+}
+
+#calculos:hover {
+    background-color: #45a049;
+} 
+
+#calculos:active {
+    background-color: #3e8e41;
+}
+
+#itemTiendas{
+    margin-left: 20px;
+}
+
+#parrafoSalida{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: medium;
+}
+
+.menuInputMayor{
+    background-color: greenyellow;
+}
+
+.menuInputMenor{
+    background-color: lightblue;
+}

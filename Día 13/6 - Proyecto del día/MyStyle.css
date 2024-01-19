@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 40%;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+h1{
+    color:rgb(222, 160, 141);
+    font-family: "Great Vibes", cursive;
+    font-weight: bold;
+    font-size: larger;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.logo img{
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.espera img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.esquema{
+    background-color: #eaaec1;
+    border-radius: 5%;
+    margin: 10px;
+    color: whitesmoke;
+}
+
+.esquema{
+    margin: 20px;
+}
+

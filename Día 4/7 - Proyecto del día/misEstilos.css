@@ -1,0 +1,22 @@
+input{
+    margin: 8px;
+    height: 20px;
+    border-color: rgb(131, 178, 178);
+}
+
+#campoResultado{
+    color: rgb(213, 23, 23); font-weight: bold;
+}
+
+#campoResultado{
+    margin: 12px;
+}
+
+#ceil{
+    width: 7.5%; 
+}
+
+button{
+    border-color: cornflowerblue; margin: 3px; padding: 2%; font-size: larger;
+}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Programa Películas recomendadas</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="funcionesAsociadas.js"></script>
+</head>
+<body>
+    <br>
+    <h1>Calculadora Películas recomendadas</h1>
+    <br>
+    <h4>Ingresa tu edad para recomendarte: <input type="number" id="edadIngresada"></h4>
+    <button onclick="recomendar('accion')">Acción</button>
+    <button onclick="recomendar('aventura')">Aventura</button>
+    <button onclick="recomendar('drama')">Drama</button>
+    <button onclick="recomendar('terror')">Terror</button>
+    <br>
+    <br>
+    <br>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; color: rgb(105, 32, 32);">Se recomineda ver:</p>
+    <h3 id="mostrarRecomendacion"></h3>
+</body>
+</html>

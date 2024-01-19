@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>mostrar Info de cuenta: Banco Springfield</title>
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+<body onload="obtnerDatosCliente()">
+    <br>
+    <h1>Resume de Cuenta personal<i> Banco Springfield</i></h1>
+    <h4>Cuenta Personal:</h4>
+    
+    <div><label>Firma Bancaria: </label><spam class="bloques" id="idBanco"></spam></div>
+    <div><label>SUCURSAL: </label><spam class="bloques" id="idSucursal"></spam></div>
+    <div><label>TITULAR CUENTA: </label><spam class="bloques" id="idTitular"></spam></div>
+    <div><label>Nro. Cuenta: </label><spam class="bloques" id="idNroCuenta"></spam></div>
+    <br>
+    <div><label>SALDOS: </label></div>
+    <div class="alin"><label class="opel" id="idDolar"></label><label class="opel" id="idEuro"></label></div>
+    <br>
+    <div><label>CBU: </label><spam class="bloques" id="idCBU"></spam></div>
+    <div><label>Fecha Apertura: </label><spam class="bloques" id="idFechaApertura"></spam></div>
+
+    <script>
+    
+    function obtnerDatosCliente(){
+        let dataJSON;
+        
+        fetch('resumen.json')
+        .then(respuesta => respuesta.json())
+        .then((salida) =>{
+            dataJSON= salida;
+
+        let elementoTexto1= document.getElementById('idBanco').textContent= dataJSON.banco;
+        let elementoTexto2= document.getElementById('idSucursal').textContent= dataJSON.sucursal;
+        let elementoTexto3= document.getElementById('idTitular').textContent= dataJSON.titular;
+        let elementoTexto4= document.getElementById('idNroCuenta').textContent= dataJSON.nro_cuenta;
+        let elementoTexto5= document.getElementById('idDolar').textContent= dataJSON.saldo[0].monto + " " + dataJSON.saldo[0].moneda;
+        let elementoTexto6= document.getElementById('idEuro').textContent= dataJSON.saldo[1].monto + " " + dataJSON.saldo[1].moneda;
+        let elementoTexto7= document.getElementById('idCBU').textContent= dataJSON.cbu;
+        let elementoTexto8= document.getElementById('idFechaApertura').textContent= dataJSON.abierto;
+        })
+    }
+    </script>
+</body>
+</html>

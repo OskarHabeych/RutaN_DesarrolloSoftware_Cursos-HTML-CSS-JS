@@ -1,0 +1,249 @@
+APUNTES ESENCIALES HTML-JS CURSO RUTA N EQUIPO TALENTO
+
+*** Trucos HTML:
+
+* Ctrl + space --> Si se ejecuta esta orden dentro de una etiqueta Html el editor mostrará todos los atributos que se le pueden aplicar a dicha etiqueta donde estamos parados.
+
+* alt + e --> Buscar atributo que se necesite en la etiqueta seleccionada (para ello se debe colocar el puntero del mouse en el espacio interno de la etiqueta.
+
+* ../ --> Éste código quiere decir que el vínculo que se quiere implemetar al dar click en él, la página web vuelva a un nivel más arriba.
+
+* <a href= "......target="blank" --> Hace que al pinchar en un enlace dentro de la pagina me habra una pestaña nueva sin que se me salga el explorador de la página original de donde estaba.
+
+* Ctrl + k s --> Guarda todos los cambios de todas las hojas (archivo) que hayan sido modificadas en un proyecto.
+
+* Ctrl + Shift + F --> Me busca algun archivo que contenga una palabra que se ha puesto para buscar
+.
+.
+.
+.
+.
+.
+
+*** Tema:LOOPS
+
+Los siguientes son los didferentes tipos de loops que encontramos en JAVASCRIP:
+
+. for : Lo que hace es verificar si la condición es verdadera y lueego de eso empieza a ejecutar la primera iteración del loop. Por tanto si la condición inicial no se cumple desde
+        el principio el loop for nunca ejecutará nada.
+
+. do while : Ejecuta la primera iteración del código sin proguntar nada y recién luego de eso verifica si la condición es verdadera para evaluar si continúa o no con la siguiente iteración.
+             En resumen do while pone primero las líneas a ejecutar y la condición después. 
+
+. while : Ejecuta la condición y si ésta es verdadera entonces se repite el ciclo tantas veces en cuanto se cumpla la condición. Este loop "while" funciona exactamente al revés del 
+          "do while".
+
+. for of : "Reitera el código por cada variable de un iterable". Por ejemplo en una variable de una array de números, se repetiría un código por cada número de dicho array.
+           Este tipo de loop opera sobre cada valor que posee el itererable uno a uno y en orden secuencial y cada operación del loop sobre un valor se denomina iteración.
+
+. for in :
+
+
+** ¿Qués el JSON?
+
+Es un formato de texto ligero (formato de datos que es similar a un objeto pero se usa para transmitir datos entre un servido y una app web o entre distintas aplicaciones y es fácil de leer y de escribir 
+y es completamente compatible con JS, haciendo que se se pueda convertir objetos JS en cadenas JSON y viceverza.
+
+-  JSON puede ser totalmente independiente de JS (puede ser leído por muchos lenguajes de programación) y va en una hoja aparte con la terminación .JSON
+
+- El formato de JSON es sensible a mayúsculas y minúsculas y las llaves y las comillas dobles son obligatorias.
+
+- JSON como es un formato de datos, entonces SOLO CONTIENE PROPIEDADES Y NO MÉTODOS.
+
+
+** Uso de la librería FETCH (en ingés traduce extraer o recuperar)
+
+Es otra forma de acceder a los datos de un JSON y es una función nativa de JS que se utiliza para realizar solicitudes http asíncronas al igual que el objeto XMLHttpRequest pero que utiliza una interfaz mucho más sencilla de usar y de código más limpio (forma más sencilla de obtener o enviar datos a un servidor).
+
+
+** Respuesta una operación ASINCRÖNICA
+
+Es cuando unos procesos que realiza un código al cargarse en el navegador pueden tomar más tiempo en cargarse pero el resto del código posterior seguirá ejecutandose. Esto quiere decir que 
+habrá una "promesa" de alguna tarea que tardará más tiempo en ejecutarse o completarse pero el resto del código posterior se caragará sin problemas.
+
+
+** Tipo de Peticiones(métodos) HTTP:
+
+GET --> método más utilizado,y se utiliza para obtener información de un servidor, por ejemplo para obtener una lista de usuarios a un servidor.
+
+POST --> se utiliza para enviar info al servidor, como puede ser crear un nuevo usuario o actualizar un registro existente.
+
+PUT --> se utiliza para actualizar un recurso en el servidor, es similar a POST pero PUT actuliza un registro en particular.
+
+DELETE --> se utiliza para eliminar un recurso en el servidor.
+
+
+** Respuestas a las solicitudes HTTP:
+
+Traen consigo un código de estado http y estos códigos son números que indican cual ha sido la respuesta a la solicitud:
+
+200 --> la respuesta se ha completado satisfactoriamente.
+
+201 --> quiere decir que el elemento se ha creado, en caso de que se mando una solicitud de creacón de algo.
+
+204 --> que la respuesta llegó sin contenido.
+
+400 --> Bad request o mal solicitado.
+
+401 --> respuesta no autorizada.
+
+
+*** Tema: EVENTOS EN TIEMPO REAL
+
+- Actualizan el website sin recargar en tiempo real cada vez que el servidor correspondiente tiene alguna novedad. 
+
+- El anterior punto se logra mediante la utilización de tecnologías llamadas: 
+
+     . Websocket: estos permiten la navegación bidireccional entre el navegador(cliente) y el servidor
+
+     . http/2 server push
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*** Tema: Aplicaciones Web circundantes a JS :
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- NODE.JS/REACT (creando el proyecto REACT):
+
+(- REACT es una biblioteca de Javascript que facilita la construcción de interfaces de usuario donde unas de sus características más destacadas es su capacidad para actualizar y renderizar   sólamente los componentes que han cambiado más no el resto de la página, ésto hará que la app sea mucho más eficiente.
+
+- REACT puede crear apps de una sola página y como hacer que los componentes se actualicen de forma dinámica sin tener que recargar toda la página.
+
+- Apps DE UNA SOLA PÁGINA: Significa que todos los componentes de la página y la información de la página esta cargada en una sola vista o página y no en varias vistas o páginas.)
+
+   
+Comandos Importantes:
+
+ --> cd Día 14
+
+ --> cd 1 - Proyecto REACT
+
+ * npx create-react-app "nombre del proyecto" --> npx es un comando que se utiliza para ejecutar paquetes tipo "node" de forma temporal mas no global que aún no están instalados en el 
+                                                  sistema, este comando se utiliza para descargar y ejecutar una app tipo react.                       
+                             
+
+--> ENTRAMOS AL PROYECTO REACT :
+
+* PS C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware\Día 14\1 - Proyecto REACT> cd minueva-app 
+
+
+--> INICIALIZAMOS npm : (Aparecerá en el navegador el sitio web iniciado con el componente react, conectando en el puerto 3000) 
+
+* PS C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware\Día 14\1 - Proyecto REACT\minueva-app> npm start
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- ANGULAR:
+
+(ANGULAR es un marco de trabajo para el desarrollo Web que fue creado por Google en 2010 y fué lanzado oficialmente en 2016 y ahora es una de la herramientas más populares utilizadas por los programadores para crear tanto; 
+ 
+ - Apps SPA: aplicaciones de usa sola página
+ - Apps PWA: Son aplicaciones Web progresivas
+
+ - ANGULAR tiene la capacidad de realizar aplicaciones web más grandes y más complejas porque proporciona una estructura muy organizada y un gran conjunto de herramientas.
+
+ - ANGULAR utiliza un lenguaje llamado TypeScript:
+
+	- TypeScript --> es un super conjunto de JavaScript donde se pueden utilizar todas la características de este mismo Javascript y además agregar más funcionalidades con TypeScript.
+
+
+Comandos Importantes:
+
+--> COMANDO DE INSTALACIÓN DE ANGULAR:
+
+ * C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware>npm install -g @angular/cli
+
+npm WARN deprecated @npmcli/move-file@2.0.1: This functionality has been moved to @npmcli/fs
+
+added 269 packages in 18s
+
+39 packages are looking for funding
+  run `npm fund` for details
+
+--> cd Día 14
+
+--> cd 3 - Proyecto ANGULAR
+
+--> CREAMOS EL NUEVO PROYECTO CON ANGULAR:
+
+ * C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware\Día 14\3 - Proyecto ANGULAR>ng new minueva-app3
+
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use?
+> CSS
+  SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
+  Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
+  Less   [ http://lesscss.org                                             ]
+? Which stylesheet format would you like to use? CSS
+CREATE minueva-app3/angular.json (2730 bytes)
+CREATE minueva-app3/package.json (1043 bytes)
+CREATE minueva-app3/README.md (1065 bytes)
+CREATE minueva-app3/tsconfig.json (901 bytes)
+CREATE minueva-app3/.editorconfig (274 bytes)
+CREATE minueva-app3/.gitignore (548 bytes)
+CREATE minueva-app3/tsconfig.app.json (263 bytes)
+CREATE minueva-app3/tsconfig.spec.json (273 bytes)
+CREATE minueva-app3/.vscode/extensions.json (130 bytes)
+CREATE minueva-app3/.vscode/launch.json (470 bytes)
+CREATE minueva-app3/.vscode/tasks.json (938 bytes)
+CREATE minueva-app3/src/main.ts (214 bytes)
+CREATE minueva-app3/src/favicon.ico (948 bytes)
+CREATE minueva-app3/src/index.html (297 bytes)
+CREATE minueva-app3/src/styles.css (80 bytes)
+CREATE minueva-app3/src/app/app-routing.module.ts (245 bytes)
+CREATE minueva-app3/src/app/app.module.ts (393 bytes)
+CREATE minueva-app3/src/app/app.component.html (22709 bytes)
+CREATE minueva-app3/src/app/app.component.spec.ts (1009 bytes)
+CREATE minueva-app3/src/app/app.component.ts (216 bytes)
+.
+.
+.
+.
+.
+.
+
+  Successfully initialized git.
+
+--> ENTRAMOS AL PROYECTO ANGULAR CREADO:
+
+ * C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware\Día 14\3 - Proyecto ANGULAR>cd minueva-app3
+
+--> AHORA CREAMOS UN NUEVO COMPONENTE DEL PROYECTO DE ANGULAR SI NOS APETECE:
+
+ * C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware\Día 14\3 - Proyecto ANGULAR\minueva-app3>ng generate component saludador
+
+CREATE src/app/saludador/saludador.component.html (24 bytes)
+CREATE src/app/saludador/saludador.component.spec.ts (580 bytes)
+CREATE src/app/saludador/saludador.component.ts (214 bytes)
+CREATE src/app/saludador/saludador.component.css (0 bytes)
+UPDATE src/app/app.module.ts (487 bytes)
+
+
+--> EJECUCIÓN DE LA APP ANGULAR (listening on localhost:4200): este comando se usa si ya se esta realizando la aplicación:
+
+ * C:\Users\Asus\Documents\RutaN_EquipoTalento_DesarrolloSoftware\Día 14\3 - Proyecto ANGULAR\minueva-app3>ng serve
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- jQuery:
+
+( jQuery es una librería que simplifica el código Html de las pag Web de forma muy sencilla, haciendo cambios rápidos y eficientes.  
+  
+ - jQuery puede trabajar con css y javascript de forma más fácil y más sencilla que solo trabajar con Javascript, ahorrando tiempo y reduce la cantidad de código; jQuery es como un asistente personal.
+
+
+
+	
+
+
+  
+  
+
+
+
+
+
+
+
+
+
